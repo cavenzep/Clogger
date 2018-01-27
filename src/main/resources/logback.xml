@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 根节点，设置为调试模式 自动重扫描配置文件 间隔为30秒 -->
+<configuration>
+    <!--<jmxConfigurator />-->
+    <!-- 定义控制台输出 -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- 定义过滤器 相比logger内定义优先级高   -->
+        <!--				<filter class="ch.qos.logback.classic.filter.ThresholdFilter">-->
+        <!--					<level>warn</level>-->
+        <!--				</filter>-->
+        <!-- 定义日志格式 -->
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>
+                %date{yyyy-MM-dd HH:mm:ss} %level [%thread] %10logger[%file:%line] - %msg%n
+            </pattern>
+        </layout>
+    </appender>
+
+    <!-- 单独对指定的日志设定级别，使该日志对象输出地日志级别限定在：“INFO”级别，不受跟级别的限制   目标可以是类或者包-->
+    <!--	<logger name="com.ztgame.logback.test" level="info">-->
+    <!--		<appender-ref ref="SIZE_BASE" />-->
+    <!--	</logger>-->
+    <!--	<logger name="com.ztgame.logback.test" level="info">-->
+    <!--		<appender-ref ref="SIZE_BASE" />-->
+    <!--	</logger>-->
+    <logger name="com.howtodoinjava.demo.controller" additivity="true" >
+        <level value="error" />
+    </logger>
+    <logger name="com.howtodoinjava.demo.dao" additivity="true" >
+        <level value="warn" />
+    </logger>
+    <logger name="com.howtodoinjava.demo.service" additivity="true" >
+        <level value="info" />
+    </logger>
+    <root level="DEBUG">
+        <appender-ref ref="CONSOLE" />
+    </root>
+</configuration>

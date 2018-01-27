@@ -1,0 +1,124 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.comall</groupId>
+  <artifactId>Caven-logger</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>Caven-logger Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <springframework.version>4.3.11.RELEASE</springframework.version>
+    <logback.version>1.2.3</logback.version>
+    <slf4j-api.version>1.7.25</slf4j-api.version>
+    <slf4j-log4j12.version>1.8.0-beta0</slf4j-log4j12.version>
+    <log4j.version>1.2.17</log4j.version>
+    <spring-jmx.version>2.0.8</spring-jmx.version>
+    <jmxtools.version>1.2.1</jmxtools.version>
+    <fastjson.version>1.2.4</fastjson.version>
+  </properties>
+
+  <dependencies>
+  <!-- Spring core support -->
+  <dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-core</artifactId>
+    <version>${springframework.version}</version>
+  </dependency>
+
+  <dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-context</artifactId>
+    <version>${springframework.version}</version>
+  </dependency>
+
+  <!-- Spring JMX support -->
+  <dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-jmx</artifactId>
+    <version>${spring-jmx.version}</version>
+  </dependency>
+
+  <!-- Spring MVC support -->
+  <dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-webmvc</artifactId>
+    <version>${springframework.version}</version>
+  </dependency>
+  <dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-web</artifactId>
+    <version>${springframework.version}</version>
+  </dependency>
+
+  <!-- Logback support -->
+  <dependency>
+    <groupId>ch.qos.logback</groupId>
+    <artifactId>logback-core</artifactId>
+    <version>${logback.version}</version>
+  </dependency>
+  <dependency>
+    <groupId>ch.qos.logback</groupId>
+    <artifactId>logback-classic</artifactId>
+    <version>${logback.version}</version>
+  </dependency>
+
+  <!-- slf4j support -->
+  <dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-api</artifactId>
+    <version>${slf4j-api.version}</version>
+  </dependency>
+  <dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-log4j12</artifactId>
+    <version>${slf4j-log4j12.version}</version>
+  </dependency>
+
+  <!-- log4j support -->
+  <!-- log4j support -->
+  <dependency>
+    <groupId>log4j</groupId>
+    <artifactId>log4j</artifactId>
+    <version>${log4j.version}</version>
+  </dependency>
+
+  <!-- jmx -->
+  <dependency>
+    <groupId>com.sun.jdmk</groupId>
+    <artifactId>jmxtools</artifactId>
+    <version>1.2.1</version>
+  </dependency>
+
+  <!-- Tag libs support for view layer -->
+
+  <dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>jstl</artifactId>
+    <version>1.2</version>
+    <scope>runtime</scope>
+  </dependency>
+
+  <dependency>
+    <groupId>taglibs</groupId>
+    <artifactId>standard</artifactId>
+    <version>1.1.2</version>
+    <scope>runtime</scope>
+  </dependency>
+  <dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>3.8.1</version>
+    <scope>test</scope>
+  </dependency>
+      <dependency>
+          <groupId>com.alibaba</groupId>
+          <artifactId>fastjson</artifactId>
+          <version>${fastjson.version}</version>
+      </dependency>
+  </dependencies>
+  <build>
+    <finalName>Caven-logger</finalName>
+  </build>
+</project>
